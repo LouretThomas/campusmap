@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>St. Mary's College (Autonomous)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@600&family=Georgia&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('campus.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    h2 {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      padding: 30px 20px 10px;
+      color: #000;
+      font-size: 3em;
+      font-weight: bold;
+    }
+    h2 span {
+      display: block;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.65em;
+      font-weight: 700;
+      color: #222;
+      letter-spacing: 1px;
+    }
+    .vision-container {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 800px;
+      margin: 10px auto 20px;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .vision-container h3 {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+    .vision-container p {
+      font-size: 1.2em;
+      font-family: 'Georgia', serif;
+      color: #9B2D30;
+      font-weight: bold;
+      margin: 0;
+    }
+    .welcome-banner {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #004080;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 12px 0;
+      margin: 0 auto 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      display: block;
+      text-align: center;
+    }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px 20px;
+      background-color: rgba(255,255,255,0.85);
+      border-radius: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .image-button {
+      text-align: center;
+      cursor: pointer;
+    }
+    .image-button img {
+      width: 180px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+    .image-button img:hover {
+      transform: scale(1.08);
+      border: 4px solid #28a745;
+    }
+    .image-button p {
+      margin-top: 8px;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #000;
+    }
+    #description {
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #000;
+      padding: 20px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 800px;
+      border-radius: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h2>
+    St. Mary's College (Autonomous)
+    <span>Explore. Learn. Discover your space.</span>
+  </h2>
+
+  <div class="vision-container">
+    <h3>Our Vision</h3>
+    <p>To make young women agents of an egalitarian society through liberative education.</p>
+  </div>
+
+  <div class="welcome-banner">
+    🌸 The College Welcomes You to a Journey of Learning and Leadership 🌸
+  </div>
+
+  <div class="button-container">
+    <div class="image-button" onclick="showInfo('principal')">
+      <img src="principaloffice.jpg" alt="Principal’s Office">
+      <p>Principal’s Office</p>
+    </div>
+    <div class="image-button" onclick="showInfo('canteen')">
+      <img src="canteen.jpg" alt="Canteen">
+      <p>Canteen</p>
+    </div>
+    <div class="image-button" onclick="showInfo('chapel')">
+      <img src="chapel.jpg" alt="Chapel">
+      <p>Chapel</p>
+    </div>
+    <div class="image-button" onclick="showInfo('class')">
+      <img src="class.jpg" alt="Class">
+      <p>Class</p>
+    </div>
+    <div class="image-button" onclick="showInfo('auditorium')">
+      <img src="auditorium.jpg" alt="Auditorium">
+      <p>Auditorium</p>
+    </div>
+  </div>
+
+  <div id="description"></div>
+
+  <script>
+    function showInfo(place) {
+      let message = "";
+      switch(place) {
+        case "principal":
+          message = "Our Principal’s Office – the guiding force and heart of the college.";
+          break;
+        case "canteen":
+          message = "Canteen – where laughter, snacks, and stories are shared.";
+          break;
+        case "chapel":
+          message = "Our Chapel – a serene space for reflection and peace.";
+          break;
+        case "class":
+          message = "Classroom – where ideas take flight and futures are shaped.";
+          break;
+        case "auditorium":
+          message = "Auditorium – the stage for creativity and celebration.";
+          break;
+      }
+      document.getElementById("description").innerText = message;
+    }
+  </script>
+</body>
+</html>
